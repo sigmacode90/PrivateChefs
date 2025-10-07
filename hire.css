@@ -1,30 +1,3 @@
-form {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-label {
-  font-weight: bold;
-}
-
-input, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 
 body {
 background-color: rgba(104, 221, 135, 0.41);
@@ -36,4 +9,54 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 p {
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* Style form labels */
+form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+/* Style input fields and textarea */
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+/* Hover effect for button */
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Optional: style headings if inside same page */
+h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
 }
