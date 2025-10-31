@@ -235,6 +235,10 @@ ul {
   text-decoration: underline;
 }
 
-html {
-  scroll-behavior: smooth;
+.rich {
+    font-size: 20px;
+}
+
+.jeff {
+    font-size: 20px;
 }
