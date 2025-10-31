@@ -1,32 +1,72 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Hire Our Private Chefs
-        </title>
-        <link rel="stylesheet" href = "hire.css">
-    </head>
-    <body>
-      <h1> Hire Our World Renowned Private Chefs</h1>
-      <p> Fill out the contact form below to send us a chef request
-        <br> We Will send you an inquiry with the price and further steps. </p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hire Our Private Chefs | Avangani Parmagino</title>
+    <link rel="stylesheet" href="hire.css" />
+    <meta name="description" content="Hire world-class private chefs from Avangani Parmagino. Experience personalized fine dining crafted to perfection for events, retreats, and private occasions.">
+  </head>
 
+  <body>
+    <header class="header">
+      <div class="overlay"></div>
+      <nav class="nav">
+        <div class="logo">Private Chefs</div>
+        <ul class="nav-links">
+          <li><a href="/Home.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/hire.html" class="active">Hire Us</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
 
-<form action="https://formspree.io/f/xkgqvovb" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" placeholder="Your name" required>
+    <main>
+      <section class="hire-intro">
+        <h1>Hire Our World-Renowned Private Chefs</h1>
+        <p>
+          Ready to bring luxury dining to your table? Fill out the form below to
+          request one of our elite private chefs. Once we receive your details,
+          we’ll contact you with a personalized quote and next steps to craft
+          your unforgettable culinary experience.
+        </p>
+      </section>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" placeholder="Your email" required>
+      <section class="contact-form">
+        <form action="" method="POST">
+          <label for="name">Full Name:</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
 
-  <label for="message">Message:</label>
-  <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+          <label for="email">Email Address:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
 
-  <button type="submit">Send Message</button>
-</form>
+          <label for="message">Tell Us About Your Event:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="30"
+            required
+          ></textarea
+          ><br /><br />
 
+          <button type="submit">Send Request</button>
+        </form>
+      </section>
+    </main>
 
-    </body>
-
-
+<footer class="footer">
+  <p>
+    © 2025 Private Chefs by Avangani Parmagino | All Rights Reserved
+    <br>
+    <a href="/privacy-policy.html">Privacy Policy</a> |
+    <a href="/terms-of-service.html">Terms of Service</a>
+  </p>
+</footer>
+  </body>
 </html>
