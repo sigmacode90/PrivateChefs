@@ -1,0 +1,180 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #f8f8f8;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-weight: 600;
+  color: #222;
+  font-size: 40px;
+}
+
+p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+/* === Header & Navigation === */
+.header {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1653233797467-1a528819fd4f?q=80&w=3540&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffcc70;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* === Main Content === */
+main {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: -100px;
+  position: relative;
+  z-index: 5;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.about-section h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.mission-section h2,
+.values-section h2,
+.team-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* === Values List === */
+.values-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values-section li {
+  background: #f0f0f0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #111;
+  color: #ddd;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 50px;
+  font-size: 0.95rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .nav {
+    padding: 15px 30px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  main {
+    margin-top: -80px;
+    padding: 40px 15px;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+}
