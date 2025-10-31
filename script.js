@@ -1,4 +1,7 @@
-document.querySelector('.btn-primary').addEventListener('click', e => {
+document.querySelector('.btn-primary').addEventListener('click', (e) => {
   e.preventDefault();
-  document.querySelector('#pricing').scrollIntoView({ behavior: 'smooth' });
+  document.querySelector('#pricing').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 });
