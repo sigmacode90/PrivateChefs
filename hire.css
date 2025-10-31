@@ -1,3 +1,30 @@
+form {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
 body {
 background-color: rgba(104, 221, 135, 0.41);
@@ -5,58 +32,133 @@ background-color: rgba(104, 221, 135, 0.41);
 
 h1 {
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 50px;
 }
 
 p {
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 20px;
 }
- form {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Style form labels */
-form label {
-  font-weight: bold;
-  display: block;
-  margin-top: 15px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Style input fields and textarea */
-form input,
-form textarea {
+/* Header with background */
+.header {
+  position: relative;
+  height: 200px;
+  background: url('https://images.unsplash.com/photo-1653233797467-1a528819fd4f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+}
+
+/* Overlay for opacity */
+.header .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
   width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 10;
 }
 
-/* Style the submit button */
-form button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 30px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffcc70;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
   cursor: pointer;
-  margin-top: 20px;
-  padding: 12px;
-  border-radius: 5px;
 }
 
-/* Hover effect for button */
-form button:hover {
-  background-color: #45a049;
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-/* Optional: style headings if inside same page */
-h2 {
-  text-align: center;
-  margin-top: 50px;
-  font-family: Arial, sans-serif;
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.9);
+    width: 200px;
+    padding: 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
