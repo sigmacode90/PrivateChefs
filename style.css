@@ -1,27 +1,236 @@
-h1 {
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+/* === Global Styles === */
 body {
-background-color: rgba(0, 229, 255, 0.556);
+    margin: 0;
+    background-color:rgba(233, 254, 255, 0.69);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
 
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
-p {
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-size: larger;
-}
+
 h2 {
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
+
 h3 {
-font-family: sans-serif;
+    font-family: sans-serif;
+    margin-bottom: 10px;
 }
+
 h4 {
-font-size: large;
-font-family: 'Franklin Gothic Medium';
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+p, li {
+    font-size: 16px;
 }
 
 ul {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding-left: 20px;
 }
 
+/* === Header & Hero === */
+.header {
+    position: relative;
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1653233797467-1a528819fd4f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+                center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+.logo {
+  font-size: 30px; /* make this larger or smaller as you prefer */
+  font-weight: bold;
+  font-family: "", serif;
+  color: #fff; /* or any color you want */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: crimson;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/* === Navigation === */
+.nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 28px;
+    transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: crimson;
+}
+
+/* === Sections === */
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section ul {
+    margin-top: 15px;
+}
+
+.section .pricing-list li,
+.section .reviews-list li {
+    margin-bottom: 10px;
+}
+
+.section p.note {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* === Customer Section === */
+.customer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.customer-img {
+    width: 250px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* === Footer === */
+.footer {
+    background-color: #111;
+    color: #ddd;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 50px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .customer-img {
+        width: 80%;
+    }
+}
+
+ @keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.header h1 {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
