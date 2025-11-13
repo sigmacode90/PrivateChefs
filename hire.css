@@ -1,77 +1,30 @@
-form {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-label {
-  font-weight: bold;
-}
-
-input, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-body {
-background-color: rgba(104, 221, 135, 0.41);
-}
-
-h1 {
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size: 50px;
-}
-
-p {
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-size: 20px;
-}
-
-/* Reset some defaults */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f7, #ffffff);
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Header with background */
+/* Header */
 .header {
   position: relative;
-  height: 200px;
-  background: url('https://images.unsplash.com/photo-1653233797467-1a528819fd4f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+  height: 220px;
+  background: url('https://images.unsplash.com/photo-1653233797467-1a528819fd4f?q=80&w=3540&auto=format&fit=crop') 
+              center/cover no-repeat;
 }
 
-/* Overlay for opacity */
 .header .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
-
-
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .nav {
@@ -86,33 +39,34 @@ body {
 }
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #fff;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 30px;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  transition: color 0.3s ease;
-  font-size: 30px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: #ffcc70;
+  transform: translateY(-2px);
 }
 
+/* Hamburger for mobile */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -124,33 +78,21 @@ body {
   width: 25px;
   height: 3px;
   background: white;
-}
-/* Hamburger for mobile */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
   border-radius: 3px;
 }
 
-/* Responsive */
+/* Responsive Nav */
 @media screen and (max-width: 768px) {
   .nav-links {
     position: absolute;
     top: 70px;
     right: -100%;
     flex-direction: column;
-    background-color: rgba(0,0,0,0.9);
-    width: 200px;
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    width: 220px;
+    padding: 25px;
     gap: 20px;
+    border-radius: 8px 0 0 8px;
     transition: right 0.3s ease;
   }
 
@@ -160,5 +102,95 @@ body {
 
   .hamburger {
     display: flex;
+  }
+}
+
+/* Headings and paragraphs */
+h1 {
+  font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 40px 0 10px;
+  color: #222;
+}
+
+p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Form styling */
+form {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-top: 15px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Inputs & Textarea */
+input:focus,
+textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Button */
+button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #45a049, #3e8e41);
+  transform: translateY(-2px);
+}
+
+/* Small screen form adjustments */
+@media screen and (max-width: 500px) {
+  form {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 16px;
   }
 }
